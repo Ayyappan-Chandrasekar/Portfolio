@@ -23,8 +23,8 @@ body{
     z-index: 1;
 }
 
-/* === removing default button style ===*/
-.profile-logo{
+ /* === removing default button style === */
+ .profile-logo {
   margin: 0;
   height: auto;
   background: transparent;
@@ -36,7 +36,7 @@ body{
 /* button styling */
 .profile-logo {
   --border-right: 6px;
-  --text-stroke-color: rgba(255,255,255,0.6);
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
   --animation-color: #37FF8B;
   --fs-size: 2em;
   letter-spacing: 3px;
@@ -48,6 +48,7 @@ body{
   color: transparent;
   -webkit-text-stroke: 1px var(--text-stroke-color);
 }
+
 /* this is the text, when you hover on button */
 .hover-text {
   position: absolute;
@@ -58,13 +59,18 @@ body{
   inset: 0;
   border-right: var(--border-right) solid var(--animation-color);
   overflow: hidden;
-  transition: 0.5s;
   -webkit-text-stroke: 1px var(--animation-color);
+  animation: slide 3s linear infinite;
 }
-/* hover */
+
+@keyframes slide {
+  0%, 100% { width: 0%; }
+  50% { width: 100%; }
+}
+
+/* hover effect is removed */
 .profile-logo:hover .hover-text {
-  width: 100%;
-  filter: drop-shadow(0 0 23px var(--animation-color))
+  filter: drop-shadow(0 0 23px var(--animation-color));
 }
 
 .collapse{
@@ -90,6 +96,12 @@ body{
     text-transform:uppercase;
     scale: 1.1;
 }
+
+nav:hover{
+  background-color: rgba(0, 0, 0, 0.769);
+  transition: 1s;
+}
+
 
 #home,#about-me,#skill,
 #projects,#experience,#contact{
@@ -218,8 +230,6 @@ body{
   background-image: url(./assets/profile1.jpg);
   background-size: 100%;
   background-position: center;
-  
-  
 }
 
 .photo-home img{
@@ -227,6 +237,7 @@ body{
   overflow: hidden;
   background-image: cover;
   border-radius: 40px;
+
 }
 
 /* About-mee */
@@ -236,21 +247,15 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 4s;
     
 }
 
 .photo-about{
   width: 30%;
   height: 50%;
-  background-color: #fff;
   border-radius: 50%;
   margin-left: 5%;
-  background-image: url(./assets/profile2.jpg);
-  /* background-position: center;
-  background-size: 180%;
-  background-size: cover;
-  background-repeat: no-repeat; */
-  
 }
 
 .photo-about img{
