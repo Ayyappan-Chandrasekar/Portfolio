@@ -7,12 +7,14 @@
 
 html{
     scroll-behavior: smooth;
+    transition: .4s;
 }
 
 body{
     font-family: "Poppins", sans-serif;
     /* background-color: black !important;    */
     background-color: black !important;
+    width: 100%;
 }
 
 .navbar{
@@ -110,23 +112,7 @@ nav:hover{
 #projects,#experience,#contact{
   height: 800px;
 }
-.home{
-  width: 100%;
-  height: 600px;
-  /* background-color: aqua; */
-  color: rgb(255, 255, 255);
-  display: flex;
-  justify-content: space-between;
-  align-items: center; 
-  
-}
 
-.profile{
-  width: 30%;
-  /* background-color: #40c9ff; */
-  margin-left: 10%;
-  position: relative;
-}
 
 /* social account */
 
@@ -218,31 +204,37 @@ nav:hover{
 
 /* social account */
 
-.photo-home{
-  width: 50%;
-  height: 80%;
-  background-color: #fff;
-  border-radius: 10%;
-  /* border: #1877f2 1pt solid; */
-  /* margin-right: 5%; */
-  background-image: url(./assets/profile1.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 20%;
-  right: 5%;
+.home {
+  width: 100% !important;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.photo-home img{
-  /* width: 10%; */
-  /* overflow: hidden; */
-  /* background-image: cover; */
-  border-radius: 40px;
-  scale: 1.2;
-  filter: blur(20px);
+.profile {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
 
+.home-photo{
+  margin-top: 40px;
+  width: 40%;
+  height: 80%;
+  background-color: #1da1f2;
+}
 
+.home-photo img{
+  width: 100%; 
+  border-radius: 70px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.photo-about img:hover{
+scale: 1.2;
+margin-right: 70px;
 }
 
 /* About-mee */
